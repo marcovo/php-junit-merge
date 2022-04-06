@@ -270,7 +270,7 @@ class Command extends AbstractCommand
     private function writeFile(fDOMDocument $dom, $filename)
     {
         $dom->formatOutput = true;
-        $result = $dom->save($filename);
+        $result = $dom->save($filename, 0);
 
         return ($result !== false) ? true : false;
     }
