@@ -65,7 +65,7 @@ class Application extends ConsoleApplication
      *
      * @return string The command name
      */
-    protected function getCommandName(InputInterface $input)
+    protected function getCommandName(InputInterface $input): ?string
     {
         return 'phpjunitmerge';
     }
@@ -75,7 +75,7 @@ class Application extends ConsoleApplication
      *
      * @return array An array of default Command instances
      */
-    protected function getDefaultCommands()
+    protected function getDefaultCommands(): array
     {
         $defaultCommands = parent::getDefaultCommands();
 
@@ -90,7 +90,7 @@ class Application extends ConsoleApplication
      *
      * @return InputDefinition
      */
-    public function getDefinition()
+    public function getDefinition(): InputDefinition
     {
         $inputDefinition = parent::getDefinition();
         $inputDefinition->setArguments();
