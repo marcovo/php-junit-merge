@@ -127,6 +127,6 @@ class Application extends ConsoleApplication
             $input = new ArrayInput(array('--help'));
         }
 
-        parent::doRun($input, $output);
+        return parent::doRun($input, $output);
     }
 }
